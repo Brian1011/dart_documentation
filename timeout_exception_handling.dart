@@ -15,4 +15,9 @@ test() async {
 
 main() {
   test();
+  /*
+    Output:
+    Test is timeout TimeoutException after 0:00:03.000000: Future not completed
+    Test is complete
+   */
 }
