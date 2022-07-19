@@ -1,11 +1,15 @@
+import 'dart:async';
+
 test() async {
   try {
     await Future.delayed(Duration(seconds: 5));
-    print('Test is complete');
+    print('Test has taken 5 seconds');
+  } on TimeoutException catch (e) {
+    print('Test is timeout $e');
   } catch (e) {
-    print(e.toString());
+    print('Test failed ${e.toString()}');
   } finally {
-    print("Done");
+    print("Test is complete");
   }
 }
 
